@@ -1,0 +1,28 @@
+// PeraltaLE
+//
+// Miles per Gallon
+//
+// Write a program that calculates a car's gas mileage.
+// 
+// The program should ask the user to enter the number of gallons of gas the car can hold,
+// and the number of miles it can be driven on a full tank.
+//
+// It should then display the number of miles that may be driven per gallon of gas.
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main() {
+
+	int gallons, miles;
+
+	cout << "How many gallons of gas can your car hold?" << endl;
+	cin >> gallons;
+	cout << "How many miles can your car be driven on a full tank of gas?" << endl;
+	cin >> miles;
+
+	cout << "Your car's MPG is " << setprecision(1) << fixed << static_cast<double>(miles) / gallons;
+
+	return 0;
+}

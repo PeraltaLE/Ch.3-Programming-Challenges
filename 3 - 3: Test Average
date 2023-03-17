@@ -1,0 +1,34 @@
+// PeraltaLE
+//
+// Test Average
+//
+// Write a program that asks for 5 test scores. 
+// 
+// The program should calculate the average test score and display it.
+// The number displayed should be formatted in fixed-point notation, with one decimal point of precision.
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main() {
+
+	double test1, test2, test3, test4, test5, average;
+
+	cout << " What was your score for Test #1?" << endl;
+	cin >> test1;
+	cout << " What was your score for Test #2?" << endl;
+	cin >> test2;
+	cout << " What was your score for Test #3?" << endl;
+	cin >> test3;
+	cout << " What was your score for Test #4?" << endl;
+	cin >> test4;
+	cout << " What was your score for Test #5?" << endl;
+	cin >> test5;
+
+	average = (test1 + test2 + test3 + test4 + test5)/ 5;
+
+	cout << "You average test score was " << setprecision(1) << fixed << average << endl;
+
+	return 0;
+}

@@ -1,0 +1,34 @@
+// PeraltaLE
+//
+// Ingredient Adjuster
+//
+// A cookie recipe calls for the following ingredients: 
+// 
+// * 1.5  cups of sugar
+// *  1   cup  of butter
+// * 2.75 cups of flour 
+// 
+// The recipe produces 48 cookies with this amount of the ingredients.
+// 
+// Write a program that asks the user how many cookies he or she wants to make,
+// then displays the number of cups of each ingredient needed for the specified number of cookies.
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+	float sugar = 1.5 / 48, butter = 1.00 / 48, flour = 2.75 / 48;
+	int numCookies;
+
+	cout << "How many cookies would you like to make? ";
+	cin >> numCookies;
+
+	cout << "\nBelow are the required ingredients:" << endl;
+	cout << "-----------------------------------\n" << endl;
+
+	cout << setprecision(3) << sugar * numCookies << " cup(s) of sugar" << endl;
+	cout << setprecision(3) << butter *numCookies << " cup(s) of butter" << endl;
+	cout << setprecision(3) << flour * numCookies << " cup(s) of flour";
+
+	return 0;
+}

@@ -1,0 +1,56 @@
+// PeraltaLE
+//
+// Box Office
+//
+// A movie theater only keeps a percentage of the revenue earned from ticket sales.
+// The remainder goes to the move distributor.
+// 
+// Write a program that calculates a theater's gross and net box office profit for a night.
+// 
+// The program should ask for the name of the movie, and how many adult and child tickets were sold. 
+// (The price of an adult ticket is $10.00 and a child's ticket is $6.00.)
+// 
+// It should display a report similar to:
+// 
+// Movie Name:									"Wheels of Fury"
+// Adult Tickets Sold:							               382
+// Child Tickets Sold:								       127
+// Gross Box Office Profit:							   $ 4,582.00
+// Net Box Office Profit:							   $   916.40
+// Amount Paid to Distributor:							   $ 3,665.60
+// 
+// Note: Assume the theater keeps 20 percent of the gross box office profit.
+#include <iostream>
+#include <iomanip>
+#include <string>
+using namespace std;
+
+int main() {
+
+	string movieName;
+	int aTickets, chTickets;
+	double grossProfit, netProfit, distributorPay;
+
+	cout << "What was the name of the movie? ";
+	getline(cin, movieName);
+
+	cout << "\nHow many adult tickets were sold? ";
+	cin >> aTickets;
+
+	cout << "\nHow many children tickets were sold? ";
+	cin >> chTickets;
+
+	grossProfit = (aTickets * 10) + (chTickets * 6);
+	netProfit = grossProfit * 0.2;
+	distributorPay = grossProfit - netProfit;
+	
+	cout << setprecision(2) << fixed << right;
+	cout << "\nMovie Name:" << setw(48) << right << '"' << movieName << '"' << endl;
+	cout << "Adult Tickets Sold:" << setw(48) << right << aTickets << endl;
+	cout << "Child Tickets Sold:" << setw(48) << right << chTickets << endl;
+	cout << "Gross Box Office Profit:" << setw(39) << right << "$ " << grossProfit << endl;
+	cout << "Net Box Office Profit:" << setw(42) << right << "$  " << netProfit << endl;
+	cout << "Amount Paid to Distributor:" << setw(36) << right << "$ " << distributorPay << endl;
+
+	return 0;
+}

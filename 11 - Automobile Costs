@@ -1,0 +1,48 @@
+// PeraltaLE
+//
+// Automobile Costs
+//
+// Write a program that asks the user to enter the monthly costs for the following expenses
+// incurred from operating his or her automobile:
+// 
+// * loan payment
+// * insurance
+// * gas
+// * oil
+// * tires
+// * maintenance
+//
+// The program should then display the total monthly cost of these expenses, 
+// and the total annual cost of these expenses.
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+
+	double monthlyCost, loanPayment, insurance, gas, oil, tires, maint;
+
+	cout << "What are your monthly expenses for the following items:\n";
+
+	cout << "Loan Payments:$";
+	cin >> loanPayment;
+	cout << "\nInsurance:$";
+	cin >> insurance;
+	cout << "\nGas:$";
+	cin >> gas;
+	cout << "\nOil:$";
+	cin >> oil;
+	cout << "\nTires:$";
+	cin >> tires;
+	cout << "\nMaintencance:$";
+	cin >> maint;
+
+	monthlyCost = loanPayment + insurance + gas + oil + tires + maint;
+
+	cout << fixed << setprecision(2);
+	cout << "-------------------------------\n";
+	cout << "Total Monthly Cost: $" << monthlyCost;
+	cout << "\nTotal Anual Cost: $" << monthlyCost * 12;
+	
+	return 0;
+}

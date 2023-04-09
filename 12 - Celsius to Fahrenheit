@@ -1,0 +1,28 @@
+// PeraltaLE
+//
+// Celsius to Fahrenheit
+//
+// Write a program tbat converts Celsius temperatures to Fahrenheit temperatures.
+// The formula is:
+// 
+// * F = (9/5) * C + 32
+//
+// F is the Fahrenheit temperature, and C is the Celsius temperature.
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+
+	double cTemp;
+
+	cout << "Celsius to Fahrenheit Converter" << endl;
+	cout << "-------------------------------" << endl;
+	cout << "Temperature in Celsius: ";
+	cin >> cTemp;
+
+	cout << fixed << setprecision(1);
+	cout << "\n\nTemperature in Fahrenheit: " << (9 / 5 * cTemp + 32);
+
+	return 0;
+}

@@ -1,0 +1,24 @@
+// PeraltaLE
+//
+// How Many Calories?
+//
+// A bag of cookies holds 30 cookies.
+// The calorie information on the bag claims there are 10 "servings" in the bag and that a serving equals 300 calories.
+// 
+// Write a program that asks the user to input how many cookies he or she actually ate then reports how many total calories were consumed.
+#include <iostream>
+using namespace std;
+
+int main() {
+
+			//   1 cookie = 100 calories
+	int cookies;
+
+	cout << "How many cookies did you eat? ";
+	cin >> cookies;
+
+	cout << "\n---------------------------------------\n";
+	cout << "You consumed a total of " << cookies * 100 << " calories!!";
+
+	return 0;
+}

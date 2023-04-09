@@ -1,0 +1,42 @@
+// PeraltaLE
+//
+// Currency
+//
+// Write a program that will convert U.S. dollar amounts to Japanese yen and to euros,
+// storing the conversion factors in the constants:
+//
+//  * YEN_PER_DOLLAR 
+//  * EUROS_PER_DOLLAR
+//
+// To get the most up-to-date exchange rates, search the Internet using the term "currency exchange rate".
+// If you cannot find the most recent exchange rates, use the following:
+//
+//  * 1 Dollar = 98.93 Yen
+//  * 1 Dollar = 0.74 Euros
+//
+// Format your currency amounts in fixed-point notation, 
+// with two decimal places of precision,
+// be sure the decimal point is always displayed.
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+
+	const double YEN_PER_DOLLAR = 98.93,
+		     EUROS_PER_DOLLAR = 0.74;
+
+	double money;
+
+	cout << "US Dollar to Yen and Euro Converter" << endl;
+	cout << "----------------------------------------" << endl;
+	
+	cout << "Enter Dollar ammount: $";
+	cin >> money;
+
+	cout << fixed << setprecision(2);
+	cout << "\n\nYen: "<< money * YEN_PER_DOLLAR << endl;
+	cout << "Euro: " << money * EUROS_PER_DOLLAR;
+
+	return 0;
+}

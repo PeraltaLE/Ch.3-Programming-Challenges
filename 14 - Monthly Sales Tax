@@ -1,0 +1,59 @@
+// PeraltaLE
+//
+// Monthly Sales Tax
+//
+// A retail company must file a monthly sales tax report listing the sales for the month and the amount of sales tax collected. 
+//
+// Write a program that asks for the month, the year, and the total amount collected at the cash register (i.e. sales plus sales tax). 
+// Assume the state sales tax is 4 percent, and the county sales tax is 2 percent.
+//
+// If the total amount collected is known and the rotal sales tax is 6 percent, the arnount of product sales may be calculated as:
+//
+//  * S = T / 1.06
+//
+// S is the product sales and T is the total income (product sales plus sales tax).
+//
+// The program should display a report similar to:
+//
+// Month: October
+// --------------------
+// Total Collected:      $ 26572.89
+// Sales:                $ 25068.76
+// County Sales Tax:     $   501.38
+// State Sales Tax:      $  1002.75
+// Total Sales Tax:      $  1504.13
+#include <iostream> 
+#include <cstring>
+#include <iomanip>
+using namespace std;
+
+int main(){
+
+    const double CTAX = 0.02, STAX = 0.04;
+
+    double totalCollected, sales, totalTax = CTAX + STAX;
+    string month;
+    int year;
+
+    cout << "Monthly Sales Tax" << endl;
+    cout << "-------------------" << endl;
+    cout << "What is the month? ";
+    cin >> month;
+    cout << "\nFor what year? ";
+    cin >> year;
+    cout << "\nWhat is the total amount collected at the cash register? ($) ";
+    cin >> totalCollected;
+    sales = totalCollected / 1.06;
+
+                 // Display the output
+    cout << "\n\n\nMonth: " << month << " " << year; 
+    cout << "\n------------------------" << endl;
+    cout << setprecision(2) << fixed << right;
+    cout << "Total Collected:" << setw(18) << "$ " << setw(15) << totalCollected << endl;
+    cout << "Sales:" << setw(40) << "$ " << setw(15) << sales << endl;
+    cout << "County Sales Tax:" << setw(14) << "$ " << setw(20) << sales * CTAX << endl;
+    cout << "State Sales Tax:" << setw(19) << "$ " << setw(18) << sales * STAX << endl;
+    cout << "Total Sales Tax:" << setw(19) << "$ " << setw(18) << sales * totalTax;
+
+    return 0;
+}
